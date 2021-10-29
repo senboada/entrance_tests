@@ -71,8 +71,8 @@
                   <button
                     type="button"
                     class="
-                    inline-flex
-                        items-center
+                      inline-flex
+                      items-center
                       py-2
                       px-4
                       bg-green-500
@@ -86,8 +86,16 @@
                     "
                     tabindex="-1"
                   >
-                  <svg
-                      class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hover:bg-white hover:text-green-500"
+                    <svg
+                      class="
+                        animate-spin
+                        -ml-1
+                        mr-3
+                        h-5
+                        w-5
+                        text-white
+                        hover:bg-white hover:text-green-500
+                      "
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -107,7 +115,6 @@
                       ></path>
                     </svg>
                     Comprobar la respuesta
-                    
                   </button>
 
                   <a
@@ -136,8 +143,8 @@
                 >
                   <p class="font-bold">La ayuda es la siguiente:</p>
                   <p class="text-sm">
-                    Intenta acceder a las herramientas de desarrollador y
-                    ve a la pestana network
+                    Intenta acceder a las herramientas de desarrollador y ve a
+                    la pestana network
                   </p>
                 </div>
               </div>
