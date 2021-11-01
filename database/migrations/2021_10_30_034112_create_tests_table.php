@@ -16,6 +16,9 @@ class CreateTestsTable extends Migration
         Schema::create('tests', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->string('url')->unique();
+            $table->enum('type', ['public', 'private']);
+            $table->string('slug')->unique();
             $table->timestamps();
             
             $table->unsignedInteger('area_id');
@@ -33,3 +36,4 @@ class CreateTestsTable extends Migration
         Schema::dropIfExists('tests');
     }
 }
+

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\request_help;
+use App\Models\RequestHelp;
 use Illuminate\Http\Request;
 
 class RequestHelpController extends Controller
@@ -41,10 +41,10 @@ class RequestHelpController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\request_help  $request_help
+     * @param  \App\Models\RequestHelp  $requestHelp
      * @return \Illuminate\Http\Response
      */
-    public function show(request_help $request_help)
+    public function show(RequestHelp $requestHelp)
     {
         //
     }
@@ -52,10 +52,10 @@ class RequestHelpController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\request_help  $request_help
+     * @param  \App\Models\RequestHelp  $requestHelp
      * @return \Illuminate\Http\Response
      */
-    public function edit(request_help $request_help)
+    public function edit(RequestHelp $requestHelp)
     {
         //
     }
@@ -64,10 +64,10 @@ class RequestHelpController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\request_help  $request_help
+     * @param  \App\Models\RequestHelp  $requestHelp
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, request_help $request_help)
+    public function update(Request $request, RequestHelp $requestHelp)
     {
         //
     }
@@ -75,10 +75,10 @@ class RequestHelpController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\request_help  $request_help
+     * @param  \App\Models\RequestHelp  $requestHelp
      * @return \Illuminate\Http\Response
      */
-    public function destroy(request_help $request_help)
+    public function destroy(RequestHelp $requestHelp)
     {
         //
     }

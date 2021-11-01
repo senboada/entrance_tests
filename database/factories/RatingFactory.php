@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\rating;
+use App\Models\Rating;
+use App\Models\Answer;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RatingFactory extends Factory
@@ -12,7 +14,7 @@ class RatingFactory extends Factory
      *
      * @var string
      */
-    protected $model = rating::class;
+    protected $model = Rating::class;
 
     /**
      * Define the model's default state.
@@ -21,8 +23,11 @@ class RatingFactory extends Factory
      */
     public function definition()
     {
+        $answer = Answer::inRandomOrder()->first();
         return [
-            //
+            'approve' => $this->faker->randomElement(['yes' ,'no']),
+            'answer_id' => $answer->id,
+            'answer_question_id' => $answer->question_id,
         ];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ip_address;
+use App\Models\IpAddress;
 use Illuminate\Http\Request;
 
 class IpAddressController extends Controller
@@ -41,10 +41,10 @@ class IpAddressController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ip_address  $ip_address
+     * @param  \App\Models\IpAddress  $ipAddress
      * @return \Illuminate\Http\Response
      */
-    public function show(ip_address $ip_address)
+    public function show(IpAddress $ipAddress)
     {
         //
     }
@@ -52,10 +52,10 @@ class IpAddressController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ip_address  $ip_address
+     * @param  \App\Models\IpAddress  $ipAddress
      * @return \Illuminate\Http\Response
      */
-    public function edit(ip_address $ip_address)
+    public function edit(IpAddress $ipAddress)
     {
         //
     }
@@ -64,10 +64,10 @@ class IpAddressController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ip_address  $ip_address
+     * @param  \App\Models\IpAddress  $ipAddress
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ip_address $ip_address)
+    public function update(Request $request, IpAddress $ipAddress)
     {
         //
     }
@@ -75,10 +75,10 @@ class IpAddressController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ip_address  $ip_address
+     * @param  \App\Models\IpAddress  $ipAddress
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ip_address $ip_address)
+    public function destroy(IpAddress $ipAddress)
     {
         //
     }

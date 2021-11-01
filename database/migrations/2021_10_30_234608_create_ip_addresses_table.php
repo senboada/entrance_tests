@@ -15,7 +15,7 @@ class CreateIpAddressesTable extends Migration
     {
         Schema::create('ip_addresses', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ip');
+            $table->string('ip_address');
             $table->unsignedInteger('answer_id');
             $table->unsignedInteger('answer_question_id');
             $table->timestamps();

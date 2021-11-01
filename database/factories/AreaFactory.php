@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\area;
+use App\Models\Area;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class AreaFactory extends Factory
@@ -12,7 +12,7 @@ class AreaFactory extends Factory
      *
      * @var string
      */
-    protected $model = area::class;
+    protected $model = Area::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class AreaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'area' => $this->faker->name(),
         ];
     }
 }

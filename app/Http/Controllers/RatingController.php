@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\rating;
+use App\Models\Rating;
 use Illuminate\Http\Request;
 
 class RatingController extends Controller
@@ -41,10 +41,10 @@ class RatingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\rating  $rating
+     * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function show(rating $rating)
+    public function show(Rating $rating)
     {
         //
     }
@@ -52,10 +52,10 @@ class RatingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\rating  $rating
+     * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function edit(rating $rating)
+    public function edit(Rating $rating)
     {
         //
     }
@@ -64,10 +64,10 @@ class RatingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\rating  $rating
+     * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rating $rating)
+    public function update(Request $request, Rating $rating)
     {
         //
     }
@@ -75,10 +75,10 @@ class RatingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\rating  $rating
+     * @param  \App\Models\Rating  $rating
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rating $rating)
+    public function destroy(Rating $rating)
     {
         //
     }

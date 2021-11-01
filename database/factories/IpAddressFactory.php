@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\ip_address;
+use App\Models\IpAddress;
+use App\Models\answer;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class IpAddressFactory extends Factory
@@ -12,7 +14,7 @@ class IpAddressFactory extends Factory
      *
      * @var string
      */
-    protected $model = ip_address::class;
+    protected $model = IpAddress::class;
 
     /**
      * Define the model's default state.
@@ -21,8 +23,11 @@ class IpAddressFactory extends Factory
      */
     public function definition()
     {
+        $answer = answer::inRandomOrder()->first();
         return [
-            //
+            'ip_address' => $this->faker->name(),
+            'answer_id' => $answer->id,
+            'answer_question_id' => $answer->question_id,
         ];
     }
 }

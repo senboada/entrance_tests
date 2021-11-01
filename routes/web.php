@@ -28,6 +28,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::get('/initial_test', function () {
-    return Inertia::render('InitialTest');
-})->name('initial_test');
+Route::get('/DeveloperTest', function () {
+    return Inertia::render('Test/Test');
+})->name('DeveloperTest');
+
+Route::resource('Test', \App\Http\Controllers\TestController::class);

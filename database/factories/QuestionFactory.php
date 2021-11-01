@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\question;
+use App\Models\Question;
+use App\Models\Test;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class QuestionFactory extends Factory
@@ -12,7 +14,7 @@ class QuestionFactory extends Factory
      *
      * @var string
      */
-    protected $model = question::class;
+    protected $model = Question::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +24,10 @@ class QuestionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'sequence' => $this->faker->numberBetween(1,100),
+            'question' => $this->faker->name(),
+            'help' => $this->faker->name(),
+            'test_id' => Test::inRandomOrder()->first()->id,
         ];
     }
 }

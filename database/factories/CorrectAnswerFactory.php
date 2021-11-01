@@ -2,18 +2,19 @@
 
 namespace Database\Factories;
 
-use App\Models\RequestHelp;
-use App\Models\question;
+use App\Models\CorrectAnswer;
+use App\Models\Question;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RequestHelpFactory extends Factory
+class CorrectAnswerFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = RequestHelp::class;
+    protected $model = CorrectAnswer::class;
 
     /**
      * Define the model's default state.
@@ -22,10 +23,9 @@ class RequestHelpFactory extends Factory
      */
     public function definition()
     {
-        $question = question::inRandomOrder()->first();
         return [
-            'question_test_id' => $question->test_id,
-            'question_id' => $question->id,
+            'answer' => $this->faker->name(),
+            'question_id' => Question::inRandomOrder()->first()->id,
         ];
     }
 }

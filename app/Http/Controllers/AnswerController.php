@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\answer;
+use App\Models\Answer;
 use Illuminate\Http\Request;
 
 class AnswerController extends Controller
@@ -41,10 +41,10 @@ class AnswerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\answer  $answer
+     * @param  \App\Models\Answer  $answer
      * @return \Illuminate\Http\Response
      */
-    public function show(answer $answer)
+    public function show(Answer $answer)
     {
         //
     }
@@ -52,10 +52,10 @@ class AnswerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\answer  $answer
+     * @param  \App\Models\Answer  $answer
      * @return \Illuminate\Http\Response
      */
-    public function edit(answer $answer)
+    public function edit(Answer $answer)
     {
         //
     }
@@ -64,10 +64,10 @@ class AnswerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\answer  $answer
+     * @param  \App\Models\Answer  $answer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, answer $answer)
+    public function update(Request $request, Answer $answer)
     {
         //
     }
@@ -75,10 +75,10 @@ class AnswerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\answer  $answer
+     * @param  \App\Models\Answer  $answer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(answer $answer)
+    public function destroy(Answer $answer)
     {
         //
     }

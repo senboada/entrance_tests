@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\test;
+use App\Models\Test;
+use App\Models\Area;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TestFactory extends Factory
@@ -12,7 +14,7 @@ class TestFactory extends Factory
      *
      * @var string
      */
-    protected $model = test::class;
+    protected $model = Test::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +24,10 @@ class TestFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->name(),
+            'url' => $this->faker->unique()->name(),
+            'type' => $this->faker->randomElement(['public' ,'private']),
+            'area_id' => Area::inRandomOrder()->first()->id,
         ];
     }
 }

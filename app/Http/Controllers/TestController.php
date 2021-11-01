@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\test;
+use App\Models\Test;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class TestController extends Controller
 {
@@ -41,21 +42,30 @@ class TestController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\test  $test
+     * @param  \App\Models\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function show(test $test)
+    public function show($slug)
     {
-        //
+        $test = Test::where('slug','=', $slug)
+        ->with('getArea')
+        ->with(['getQuestionsRelation' => function($q) {
+            $q->orderBy('sequence')
+            ->take(1)
+            ->whereDoesntHave('getAnswerRelation');
+        }])
+         
+        ->firstOrFail();
+        return Inertia::render('Test/Test',compact('test'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\test  $test
+     * @param  \App\Models\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function edit(test $test)
+    public function edit(Test $test)
     {
         //
     }
@@ -64,10 +74,10 @@ class TestController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\test  $test
+     * @param  \App\Models\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, test $test)
+    public function update(Request $request, Test $test)
     {
         //
     }
@@ -75,10 +85,10 @@ class TestController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\test  $test
+     * @param  \App\Models\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function destroy(test $test)
+    public function destroy(Test $test)
     {
         //
     }
